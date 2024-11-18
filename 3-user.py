@@ -18,7 +18,7 @@ class User():
     def __init__(self):
         """
         Initialize a new user:
-        - assigned an unique `id`
+        - assigned a unique `id`
         """
         self.id = str(uuid.uuid4())
 
@@ -40,7 +40,7 @@ class User():
         if pwd is None or type(pwd) is not str:
             self.__password = None
         else:
-            self._password = hashlib.md5(pwd.encode()).hexdigest().lower()
+            self.__password = hashlib.md5(pwd.encode()).hexdigest().lower()
 
     def is_valid_password(self, pwd):
         """
